@@ -107,12 +107,6 @@ export interface Education {
   courses?: string[];
 }
 
-// Firebase Timestamp type
-export interface FirebaseTimestamp {
-  seconds: number;
-  nanoseconds: number;
-}
-
 // Testimonial Interface
 export interface Testimonial {
   id: string;
