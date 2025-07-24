@@ -1,0 +1,8 @@
+# Ignore build/dist folders from language stats
+dist/* linguist-vendored
+build/* linguist-vendored
+node_modules/* linguist-vendored
+
+# Treat .ts and .tsx files as TypeScript
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript

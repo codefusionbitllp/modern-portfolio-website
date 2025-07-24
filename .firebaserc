@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "hiteshsapra-e1a75"
+  },
+  "targets": {
+    "hiteshsapra-e1a75": {
+      "hosting": {
+        "hsapra": [
+          "hsapra"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
