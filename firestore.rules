@@ -1,0 +1,78 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /contactForms/{document=**} {
+      allow write: if true;  // Allow all writes
+      allow read: if false; // Deny all reads
+    }
+    
+
+     match /blog/{document=**} {
+      allow write: if false;  // Allow all writes
+      allow read: if true; // Deny all reads
+    }
+    
+    
+     match /category/{document=**} {
+      allow write: if false;  // Allow all writes
+      allow read: if true; // Deny all reads
+    }
+    
+     match /portfolio/{document=**} {
+      allow write: if false;  // Allow all writes
+      allow read: if true; // Deny all reads
+    }
+    
+      
+     match /services/{document=**} {
+      allow write: if false;  // Allow all writes
+      allow read: if true; // Deny all reads
+    }
+    
+        // Allow read access to the portfolio
+    match /portfolioWeb/profile {
+      allow read: if true;
+      allow write: if false; // No external writes
+    }
+
+    // Allow read access to subcollections of profile
+    match /portfolioWeb/profile/{document=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+    
+    // Allow read access to subcollections of profile/projects
+    match /portfolioWeb/profile/projects/{document=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+    
+     // Allow read access to subcollections of profile/skills
+    match /portfolioWeb/profile/skills/{document=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+    
+     // Allow read access to subcollections of profile/experience
+    match /portfolioWeb/profile/projects/experience/{document=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+    
+      // Allow read access to subcollections of profile/education
+    match /portfolioWeb/profile/projects/education/{document=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+    
+     match /contacts/{document=**} {
+      allow write: if true;  // Allow all writes
+      allow read: if false; // Deny all reads
+    }
+    
+     match /domains/{document=**} {
+      allow write: if false;  // Allow all writes
+      allow read: if true; // Deny all reads
+    }
+  }
+}
