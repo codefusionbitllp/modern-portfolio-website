@@ -30,6 +30,7 @@ export interface Profile {
   resume?: string;
   location?: string;
   availableForWork: boolean;
+  personalInfo?: PersonalInfo;
 }
 
 // Project Interface
@@ -158,7 +159,6 @@ export interface PortfolioData {
   education?: Education[];
   testimonials?: Testimonial[];
   blogs?: BlogPost[];
-  personalInfo?: PersonalInfo;
 }
 
 // Navigation Interface

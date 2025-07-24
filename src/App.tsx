@@ -313,7 +313,7 @@ const AppContent: React.FC = () => {
           skills={portfolioData.skills}
           experience={portfolioData.experience}
           education={portfolioData.education}
-          personalInfo={portfolioData.personalInfo}
+          personalInfo={portfolioData.profile.personalInfo}
         />
 
         {/* Projects Section */}
